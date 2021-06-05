@@ -56,8 +56,8 @@ def sendEmail(to,content):
     server = smtplib.SMTP("smtp.gmail.com",587)
     server.ehlo()
     server.starttls()
-    server.login('bhayanaanmol@gmail.com','anmol2300')
-    server.sendmail('bhayanaanmol@gmail.com',to,content)
+    server.login(*YOUR EMAIL ADDRESS*,*YOUR EMAIL PASSWORD*)
+    server.sendmail(*YOUR EMAIL ADDRESS*,to,content)
     server.close()
 
 if __name__ == "__main__":
@@ -110,7 +110,7 @@ if __name__ == "__main__":
             webbrowser.open("www.youtube.com")
         elif "yourself" in query:
             speak("ab apni main kya hi taareef karun")
-            speak("i am Ava, Anmol's virtual assistant")
+            speak("i am Ava, *YOUR NAME*'s virtual assistant")
             speak("i am a very smart artificial intelligence")
         elif "open facebook" in query:
             speak("opening facebook......")
@@ -151,7 +151,7 @@ if __name__ == "__main__":
             speak("opening game......")
             os.startfile(inpath)
         elif "open teams" in query:
-            tpath = "C:\\Users\\bhaya\\AppData\\Local\\Microsoft\\Teams\\current\\Teams.exe"
+            tpath = "C:\\Users\\*YOUR DIRECTORY*\\Microsoft\\Teams\\current\\Teams.exe"
             speak("opening app......")
             os.startfile(tpath)
         elif "play song on youtube" in query:
